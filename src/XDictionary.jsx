@@ -26,31 +26,24 @@ const XDictionary = () => {
   };
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial' }}>
+    <div>
       <h2>Dictionary App</h2>
-
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={e => setSearchTerm(e.target.value)}
-        placeholder="Search for a word..."
-      />
-
-      <button onClick={handleSearch} style={{ marginLeft: '10px' }}>
-        Search
-      </button>
-
-      <div style={{ marginTop: '20px' }}>
-        {definition && (
-          <>
-            <h3>Definition:</h3>
-            <p>{definition}</p>
-          </>
-        )}
-
-        {notFound && <p>Word not found in the dictionary.</p>}
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={e => setSearchTerm(e.target.value)}
+          placeholder="Search for a word..."
+        />
+        <button onClick={handleSearch}>Search</button>
+         <h3>Definition:</h3>
+        <p>
+        {definition
+            ? definition
+            : notFound
+            ? "Word not found in the dictionary."
+            : ""}
+        </p>
       </div>
-    </div>
   );
 };
 
