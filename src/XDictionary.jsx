@@ -27,13 +27,13 @@ const XDictionary = () => {
 
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial' }}>
-      <h2>XDictionary</h2>
+      <h2>Dictionary App</h2>
 
       <input
         type="text"
         value={searchTerm}
         onChange={e => setSearchTerm(e.target.value)}
-        placeholder="Enter a word"
+        placeholder="Search for a word..."
       />
 
       <button onClick={handleSearch} style={{ marginLeft: '10px' }}>
