@@ -1,10 +1,10 @@
-// import { useState } from 'react'
+import XDictionary from "./XDictionary";
 
 function App() {
 
   return (
     <>
-      <h1>XDICTIONARY</h1>
+      <XDictionary/>
     </>
   )
 }
